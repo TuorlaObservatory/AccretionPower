@@ -45,4 +45,18 @@ Useful concepts:
 
 - The Eddington limit
 
-<img align="middle" alt="" src="https://latex.codecogs.com/gif.latex?L_\mathrm{Edd}=4\pi&space;GMm_\mathrm{p}c/\sigma_\mathrm{T}\approx&space;1.3\&space;\times\&space;10^{38}\left(\mathbf{M}/\mathbf{M}_\odot\right)~\mathrm{erg~s^{-1}}"/>
+    <img align="middle" alt="" src="https://latex.codecogs.com/gif.latex?L_\mathrm{Edd}=4\pi&space;GMm_\mathrm{p}c/\sigma_\mathrm{T}\approx&space;1.3\&space;\times\&space;10^{38}\left(\mathbf{M}/\mathbf{M}_\odot\right)~\mathrm{erg~s^{-1}}"/>
+    
+---
+
+- <img align="middle" alt="" src="https://latex.codecogs.com/gif.latex?L_\mathrm{acc}=GM\dot{M}/R_*"/>
+
+- <img align="middle" alt="" src="https://latex.codecogs.com/gif.latex?L^\mathbf{BH}_\mathrm{acc}=\eta\dot{M}c^2"/>
+
+---
+
+Emitted spectrum
+
+-  Optically thick <img align="middle" hspace=10 alt="" src="https://latex.codecogs.com/gif.latex?T\sim&space;T_\mathrm{bb}=\left(L_\mathrm{acc}/4\pi&space;R^2_*\sigma\right)^\frac{1}{4}"/>
+
+-  Optically thin <img align="middle" hspace=10 alt="" src="https://latex.codecogs.com/gif.latex?T\sim&space;T_\mathrm{th}=GMm_\mathrm{p}/3kR_*"/>
