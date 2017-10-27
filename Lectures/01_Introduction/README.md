@@ -29,3 +29,20 @@ Useful concepts:
 | WD     | 0.5 - 1   | 10 000 |
 | NS     | 1.4 - 2.2 | 10     |
 | BH     | 7         | <img align="middle" src="https://latex.codecogs.com/gif.latex?3\frac{\mathbf{M}}{\mathbf{M}_\odot}"/> |
+
+---
+
+- <img align="middle" hspace=10 alt="" src="https://latex.codecogs.com/gif.latex?R_\mathrm{Sch}=2GM/c^2"/>
+- Earth: 1 cm
+- Sun:   3 km
+
+---
+
+- For NS <img align="bottom" hspace=10 alt="" src="https://latex.codecogs.com/gif.latex?\Delta&space;E_\mathrm{acc}\approx10^{20}~\mathrm{erg~g^{-1}}}"/>
+- Fot WD <img align="bottom" hspace=10 alt="" src="https://latex.codecogs.com/gif.latex?E_\mathrm{nuc}/E_\mathrm{acc}\approx25-30"/>
+
+---
+
+- The Eddington limit
+
+<img align="middle" alt="" src="https://latex.codecogs.com/gif.latex?L_\mathrm{Edd}=4\pi&space;GMm_\mathrm{p}c/\sigma_\mathrm{T}\approx&space;1.3\&space;\times\&space;10^{38}\left(\mathbf{M}/\mathbf{M}_\odot\right)~\mathrm{erg~s^{-1}}"/>
