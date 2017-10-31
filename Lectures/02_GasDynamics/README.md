@@ -10,7 +10,7 @@ Further reading:
 
 1. [*Arnab Rai Choudhuri*](http://www.physics.iisc.ernet.in/~arnab/), [**"The physics of Fluids and Plasmas: An Introduction for Astrophysicists"**](https://www.amazon.co.uk/Physics-Fluids-Plasmas-Introduction-Astrophysicists/dp/0521555434/) + [**lecture notes**](https://nettiopsu.utu.fi/opas/opetusohjelma/marjapuuro.htm?id=8776) by [*Rami Vainio*](https://users.utu.fi/ravainio/)
 
-2. *Garrelt Mellema*, [**"Astrophysical Gasdynamics Lecture Notes"**] (http://ttt.astro.su.se/~garrelt/Teaching/AstroGasDyn.pdf)
+2. *Garrelt Mellema*, [**"Astrophysical Gasdynamics Lecture Notes"**](http://ttt.astro.su.se/~garrelt/Teaching/AstroGasDyn.pdf)
 
 3. [*Gordon Ogilvie*](http://www.damtp.cam.ac.uk/user/gio10/), [**"Astrophysical Fluid Dynamics"**](https://arxiv.org/pdf/1604.03835.pdf)
 
