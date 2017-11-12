@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plasma concepts</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/static/img/icon.png" />
+		<link href="src/talk.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <textarea id="source">
+layout: true
+background-image: url(img/normal.png)
+
+---
+
+background-image: url(img/plasma-box.jpg)
+background-size: contain;
+class: title-slide
+
+# Plasma concepts
+
+## Chapter 3. in Accretion Power in Astrophysics
+
+---
+
+# Prelude
+
+- When lengthscales $\propto$ mean free path between collisions: **plasma**
+
+- Mixture of two gases/fluids 
+    - electron-positron, electron-proton, electron-ion
+
+- Transfer of energy in collisions $\propto m_e/m_i \ll 1$
+    - Electrons and ions can have significantly different temperatures
+
+---
+class: double
+# Maxwell's equations (+ few others)
+.column[
+Boring ones:
+- $\nabla \cdot B = 0$
+
+- $\nabla \cdot E = \rho/\epsilon_0$
+]
+
+.column[
+Interesting ones:
+- $\nabla \times E = -\partial_t B$
+
+- $\nabla \times B = \mu_0 \epsilon_0 \partial_t E + \mu_0 J$
+
+- Current: $J = q v n$
+
+- Lorentz force: $\partial_t v = \frac{q}{m}( E + v \times B )$
+
+- Vlasov: $\partial_t f + v \nabla_x f + a \nabla_u f = 0$
+]
+
+---
+# Plasma oscillations
+![:scale 80!](img/osc.png)
+
+---
+# Plasma oscillations
+- Characteristic frequency (or timescale) for plasma ($\propto n^{1/2}$ only)
+
+- Lets take ions to have charge $Ze \approx e$ and
+    - $n_i = n_0$ (ion family)
+    - $n_e = n_0 + n_1(r,t)$ (electron family)
+- $n_1$ gives rise to an $E$ field: 
+  $\nabla \cdot E = -\frac{n_1 e}{\epsilon_0}$
+
+- Lorentz force then acts on charged particles: $m_e \partial_t v = -eE$.
+
+---
+
+- Vlasov equation then gives:
+    - $\partial_t n_e + \nabla \cdot (n_e v) = 0$
+
+- Neglecting products of small quantities:
+    - $\partial_t n_1 + n_o \nabla \cdot v = 0$
+
+
+- Take $\partial_t$ of Vlasov: 
+  $\partial_t \partial_t n_1 + \partial_t (n_0 \nabla \cdot v) = \partial_t^2 n_1 + n_0 \nabla \cdot \partial_t v = 0$
+
+- Take $\nabla \cdot$ of Force: 
+  $\nabla \cdot \partial_t v = -\frac{e}{m} \nabla \cdot E$.
+
+- Combine:
+  $\frac{1}{n_0} \partial_t^2 n_1 - \frac{e}{m} \nabla \cdot E$ 
+  
+- And insert $E$ field expression:
+  $\partial_t^2 n_1 - n_0 \frac{e}{m} \frac{n_1 e}{\epsilon_0} = 0$
+
+---
+# Plasma oscillations
+In the end, after beautifying we get:
+- $\partial_t^2 n_1 - n_1 (\frac{e^2 n_0}{m \epsilon_0}) = 0$
+
+- Oscillator with angular frequency:
+$\omega_p^2 = \frac{e^2 n_0}{m \epsilon_0}$
+- $\omega_p \approx 5.7 \times 10^4 n_0^{1/2}$ rad/s.  Or more roughly $t_p \sim 10^{-4} n_0^{-1/2}$ s. 
+
+|                  |    $n_0$                |  $t_p$             | 
+| ----------       | ---------               | ------------------ | 
+| **ISM**          | $\sim 5 $ cm$^{-3}$     | $\sim 10^{-5}$ s   |
+| **Earth atmos**  | $\sim 10^{6}$ cm$^{-3}$ | $\sim 10^{-7}$ s   |
+| **Laser plasma** | $\sim 10^{15}$ cm$^{-3}$| $\sim 10^{-12}$ s  |
+
+---
+
+# Plasma Shielding: Debye length
+
+- We now know typical plasma response time $t_p$, what lengthscale does this correspond to?
+- Take velocity from thermal plasma: $v_e \sim (kT/m)^{1/2}$
+- Then distance covered by electron with velocity $v_e$ in time $t_p$ is
+    - $\lambda_{Deb} = \left( \frac{\epsilon_0 kT}{n_0 e^2} \right)^{1/2}$
+    $\sim 7 ~(T[K] ~/~ n_0)^{1/2}$ cm.
+
+|                  |    $n_0$                |  $t_p$             | $T$ (K) | $\lambda_{Deb}$ | 
+| ----------       | ---------               | ------------------ |-------- | -------------  | 
+| **ISM**          | $\sim 5 $ cm$^{-3}$     | $\sim 10^{-5}$ s   |$\sim 5 \times 10^4$ | $\sim 7$ m |
+| **Earth atmos**  | $\sim 10^{6}$ cm$^{-3}$ | $\sim 10^{-7}$ s   |$\sim 300$           | $\sim 1.5$ mm |
+| **Laser plasma** | $\sim 10^{15}$ cm$^{-3}$| $\sim 10^{-12}$ s  |$\sim 10^7$          |   $\sim 7~\mu$m |
+
+---
+class: double
+# Coulomb Collisions
+
+.column[
+- Deflection angle will be appreciable if Coulomb potential energy $\sim$ kinetic energy:
+    - $\frac{e_1 e_2}{\epsilon_0 b} \sim m v^2 \sim kT$
+- Change of velocity is $\Delta v \sim v \theta \sim \frac{e_1 e_2}{\epsilon_0 m v b}$ and $\theta \propto 1/v^2$
+
+- Rate of change of energy:
+    - $\frac{d}{dt} \Delta v^2 \sim N v \int_{b_0}^{b_1} (\Delta v)^2 2 \pi b db$
+    $= \frac{n e_1^2 e_2^2}{8 \pi \epsilon_0^2 m^2 v} \ln (\frac{b_1}{b_0}) $ 
+]
+
+.column[
+![:scale 80%](img/coll.png)
+]
+---
+# Plasma Coulomb parameter $\ln \Lambda$
+-  Minimum: $b_0$ = max{$\frac{\hbar}{mv}, \frac{2 e_1 e_2}{\epsilon_0 m v^2}$}
+    - Other one is quantum mechanical limit from $\Delta x \Delta p \sim \hbar$
+    - Second one just from Coulomb pot. E $\sim$ Kinetic energy
+
+- Maximum: $b_1$ $\sim$ Debye length
+
+
+- $\ln \Lambda \approx 10 + 3.45 \log T - 1.15 \log n_e$
+
+---
+# Collision time
+
+- Typical time $\frac{d \Delta v^2}{d t} \sim \frac{\Delta v^2}{t}$
+
+- So "Deflection time" (=time when on average we have changed direction due to collisions) is
+$t_D \sim \frac{v^2}{d\Delta v^2/dt} = \frac{8\pi \epsilon_0^2 m^2 v^3}{n e^4 \ln \Lambda}$
+
+- Note that for electron-ion plasma $t_d$ is $\sim m_i/m_e \approx 1836$ greater. 
+  Hence it takes time to even out by collisions.
+
+---
+# Stopping of fast particles by plasma
+- Lets define incoming particle as mass, velocity, and charge as $m_1, U \gg v_t, e_1$.
+
+- Slowing-down timescale: $t_s = -\frac{U}{dU/dt}$
+    - $t_s \sim \frac{8\pi\epsilon_0^2 m_1^2 U^3}{n e_1^2 e_2^2 \ln\Lambda} \frac{m_2}{m_1 + m_2}$
+    
+- Consequence of the mass-term
+    -  Suprathermal ions are best slowed by electrons in $t_s \sim (m_e/m_p) t_d$
+    -  Suprathermal electrons are slowed by both species with just $t_s \sim t_d$.
+
+---
+# Collisionless shocks
+
+ ![:scale 66%](img/shock.jpg)
+
+
+
+---
+
+</textarea>
+
+    <script src="src/remark-0.13.0-min.js">
+    </script>
+
+    <script type="text/javascript">
+    remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    remark.macros.size = function (x,y) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + x + 'px; height: ' + y + 'px" />';
+    };
+    remark.macros.author = function () {
+        var url = this;
+        return '<img src="' + url + '" class=author-pic />';
+    };
+    var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: '',
+        highlightStyle: 'default',
+        highlightLines: true
+      }) ;
+    </script>
+
+    <!-- for offline mathjax see http://stackoverflow.com/a/19209462 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+    MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "TeX": {
+          Macros: {AA : "{\\unicode{x212B}}"},
+          extensions: ["autoload-all.js"]
+        },
+        "HTML-CSS": {
+          scale: 90
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+
+    MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      MACROS.color = "Color";
+      delete MACROS.colorbox;
+      delete MACROS.fcolorbox;
+    });
+
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
