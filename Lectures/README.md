@@ -5,3 +5,4 @@ Lecture materials can be found here.
 2. [Gas Dynamics](/Lectures/02_GasDynamics)
 3. [Spherically Symmetric Accretion](/Lectures/03_SphericalAccretion)
 4. [Plasma Concepts](/Lectures/04_plasmaConcepts)
+6. [Shock Waves](/Lectures/06_ShockWaves)
