@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accretion in binary systems</title>
+    <meta charset="utf-8" />
+    <!-- <link href="C:\Users\iliak\OneDrive\GOOGLEDRIVE\Development\TuorlaObservatory\UTU-slides/style.css" rel="stylesheet" type="text/css"/> -->
+    <link href="https://cdn.rawgit.com/Ilia-Kosenkov/UTU-slides/81794612/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <style type="text/css">
+    .left-large-1 .column{
+      width: 65%;
+      margin-top: 3%;
+      float: left;
+    }
+    .right-small-1{
+      width: 34%;
+      float: right;
+    }
+    </style>
+  </head>
+
+  <body>
+    <textarea id="source">
+        layout: true
+
+        ---
+
+        class: title-slide, utu-back-title
+       
+        # Accretion in binary systems
+        ## **Ilia Kosenkov**, 2017-12-01 @ Tuorla
+
+        
+        ---
+
+        class: utu-back-content
+        # Importance of accretion as power source
+        --
+
+        - Majority of the stars are members of binary systems,
+        --
+
+        - Binaries reveal more information about themselves,
+        --
+
+        - Typical scenarios of mass transfer
+          - Different stars end evolution timescales `\(\rightarrow\)` transfer through `\(L_1\)`
+          - Mass ejection in the form of stellar wind `\(\rightarrow\)` wind accretion
+        --
+
+        - Parameters of a binary can evolve with time (e.g. angular momentum loss)
+
+        ---
+
+        class: utu-back-content
+
+        # Roche geometry
+        .double[
+          .column[
+      
+        Kepler's law `\(\ 4\pi^2a^3 = GMP^2\)` 
+        `\(q = \frac{M_2}{M_1}\)` `\(\ m = \frac{M}{M_\odot}\)`,
+        and `\(\ |\omega| = \left[\frac{GM}{a^3}\right]^\frac{1}{2}\)`
+        `\(\dfrac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} =\)`
+        `\(= - \nabla\Phi_\mathrm{R} - 2\omega\times\mathbf{v} -\frac{1}{\rho}\nabla P\)`
+        `\(\Phi_\mathrm{R}(r) = -\frac{GM_1}{|\mathbf{r - r_1}|} - \frac{GM_2}{|\mathbf{r - r_2}|} -\frac{1}{2}(\omega\times\mathbf{r})^2\)`
+          ]
+          .column[
+
+          ![:scale 80%](img/01.png)
+
+          ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Roche geometry
+
+        
+        .left-large-1[
+        .column[
+        ![:scale 100%](img/02.png)
+        ]]
+
+        .right-small-1[
+        .column[
+        ![:scale 100%](img/03.png)
+        ]]
+
+        ---
+
+        class: utu-back-content
+
+        # Roche geometry and binary evolution
+        --
+
+        `\(\frac{R_2}{a} = \frac{0.49}{0.6 + q^{-2/3}\ln(1 + q^{1/3})}\)` (Eggleton, 1983)
+
+        --
+        
+        or `\(\frac{R_2}{a} = \frac{2}{3^{4/3}} \left(\frac{q}{1+q}\right)^{1/3} \approx 0.462\left(\frac{M_2}{M_1 + M_2}\right)\)`
+      
+        --
+
+        `\(\frac{b_1}{a} = 0.500 - 0.227\lg q\)`
+
+        --
+        
+        Average density of lobe-filling star
+        `\(\bar{\rho} = \frac{3^5 \pi}{8GP^2} \approxeq 110P^{-2}_\mathrm{hr}~\mathrm{g~cm^{-3}}\)`
+
+        --
+
+        And period-radius relation for a lower part main sequece star
+        `\(R_2 \approxeq 7.9 \times 10^9 P_\mathrm{hr}~\mathrm{cm}\)`
+
+        ---
+
+        class: utu-back-content
+
+        # Binary evolution: What happens to the donor?
+        --
+
+        Mass loss leads to changes in q. Assuming all matter from donnor goes to accretor
+        
+        `\(\frac{\dot{a}}{a} = \frac{2\dot{J}}{J} + \frac{2(-\dot{M}_2)}{M_2}\left(1 - \frac{M_2}{M_1}\right)\)`
+        
+        --
+
+        and 
+        
+        `\(\frac{\dot{R}_2}{R_2} = \frac{2\dot{J}}{J} + \frac{2(-\dot{M}_2)}{M_2}\left(\frac{5}{6} - \frac{M_2}{M_1}\right)\)`
+
+        ---
+
+        class: utu-back-content
+
+        # Binary evolution: What happens to the donor?
+        --
+
+        `\(-\dot{M}_2 = \frac{M_2}{(5/3 - 2q)t_\mathrm{nuc}}\)` happens when e.g. secondary evolves off the main sequence
+
+        --
+
+        `\(\frac{-\dot{M}_2}{M_2} = \frac{-\dot{J}/J}{4/3 - M_2/M_1}\)` is driven by angular momenutm loss (short-period systems)
+
+        --
+
+        `\(-\dot{M}_2(\mathrm{inst}) = \dot{M}_0\exp\left[\frac{R_* - R_2}{H_*}\right] \approx 10^{-8} M_\odot~\mathrm{yr^{-1}}\)` for a lower main sequece stars
+
+        ---
+
+        class: utu-back-content
+
+        # Disc formation
+        --
+
+        Let's decompose velocity of the material near `\(L_1\)`
+
+        --
+
+        `\(v = v_\bot + v_\parallel\)`
+
+        --
+
+        `\(v_\bot \approx b_1\omega \approx 100m_1^{1/3}(1 + q)^{1/3}P^{-2/3}_\mathrm{day}~\mathrm{km~s^{-1}}\)`
+
+        --
+
+        `\(v_\parallel \lesssim c_\mathrm{s} \approx 10~\mathrm{km~s^{-1}}\)` for a `\(10^5~\mathrm{K}\)` envelope temperature
+
+        ---
+        
+        class: utu-back-content
+
+        # Disc formation
+        --
+
+        The stream trajectory can be approximated by a trajectory of a test particle released from `\(L_1\)`
+
+        --
+
+        `\(v_\phi(R_\mathrm{circ}) = \left(\frac{GM_1}{R_\mathrm{circ}}\right)^{1/2}\)`
+
+        --
+
+        `\(\frac{R_\mathrm{circ}}{a} = (1+q)[0.500 - 0.227\lg q]^4\)`
+
+        --
+        
+        `\(L_\mathrm{disc} = \frac{GM_1\dot{M}}{2R_*} = \frac{1}{2}L_\mathrm{acc}\)`
+
+        ---
+
+        class: utu-back-content
+
+        # Accretion in close binaries: other possiblities
+
+        .double[
+        .column[
+        `\(v_\mathrm{w} \approx \left(\frac{2GM_\mathrm{E}}{R_\mathrm{E}}\right)^{1/2}\)` 
+        
+        For a `\(10^{-5}~M_\odot~\mathrm{yr}^{-1}\)`
+        mass loss rate `\(v_\mathrm{w} \approx \mathrm{few} \times 10^3~\mathrm{km~s^{-1}}\)`
+
+        The wind sweeps at angle `\(\beta \approx \tan^{-1} (v_\mathrm{n}/v_\mathrm{w})\)` 
+
+        and relative speed `\(v_\mathrm{rel} \approx (v_\mathrm{n}^2 + w_\mathrm{w}^2)^{1/2}\)`
+        ]
+
+        .column[
+        ![scale: 100%](img/04.png)
+        ]
+        ]
+
+        ---
+
+        class: utu-back-content
+
+        # Accretion in close binaries: other possiblities
+
+        .double[
+        .column[
+        Fraction of mass captured by accretor is `\(\frac{\dot{M}}{-\dot{M}_\mathrm{w}} \approx \frac{1}{4}\left(\frac{M_\mathrm{n}}{M_\mathrm{E}}\right)^2\left(\frac{R_\mathrm{E}}{a}\right)^2\)`
+
+        in a cylindrical region of `\(r \approx 2GM_\mathrm{n}/v_\mathrm{rel}^2\)`
+
+        which gives luminosity of the order of `\(L_\mathrm{acc} \approx 10^{37}\left(\frac{\dot{M}}{-10^{-4}\dot{M}_\mathrm{w}}\right)\left(\frac{-\dot{M}_\mathrm{w}}{10^{-5} M_\odot~\mathrm{yr^{-1}}}\right)~\mathrm{erg~s^{-2}}\)`, which is mainly emitted in X-rays
+        ]
+        .column[
+        ![:scale 100%](img/05.png)
+        ]
+        ]
+        
+        ---
+        
+        class: utu-back-content
+
+        # Accretion in close binaries: other ways to form a disc?
+        --
+
+        The circularization radius is 
+        `\(\ \frac{R_\mathrm{circ}}{a} = \frac{M_\mathrm{n}^3(M_\mathrm{n} + M_\mathrm{E})}{16\lambda^4(a)M_\mathrm{E}^4}\left(\frac{R_\mathrm{E}}{a}\right)^4\)`
+        with `\(\ \lambda(r) \approx \frac{v_\mathrm{w}^2}{v_\mathrm{esc}^2}\approx 1\)`
+
+        --
+
+        The uncerainty in `\(\lambda\)` makes it hard to estimate whether the circulaization radius is large enough for a disk to form.
+
+        ---
+        
+        class: utu-back-content
+
+        # Accretion in close binaries: other possibilities
+
+        --
+
+        - Asynchronous rotation of the donor or eccentric orbits - irregular accretion. Short-lived phenomena as tidal forces tend to circularize everything
+
+        --
+
+        - Irradiation by the luminocity resulting from accretion can further boost the process and make it self-sustainable. Can possibly stimulate wind loss.
+
+        --
+
+        - In supersoft binaries (accretor is WD) accretion process can be boosted by a factor of ~40 by steady nuclear burning at the surface.
+
+        ---
+
+        class: utu-back-content, middle, center
+
+        # Thank you!
+
+    </textarea>
+
+    <script src="https://rawgit.com/csc-training/slide-template/master/remark/src/remark-0.13.0-min.js">
+    </script>
+
+    <script type="text/javascript">
+    remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    remark.macros.size = function (x,y) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + x + 'px; height: ' + y + 'px" />';
+    };
+    remark.macros.author = function () {
+        var url = this;
+        return '<img src="' + url + '" class=author-pic />';
+    };
+    var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: '%current% / %total%',
+        highlightStyle: 'default',
+        highlightLines: true,
+        countIncrementalSlides: false
+      }) ;
+    </script>
+
+    <!-- for offline mathjax see http://stackoverflow.com/a/19209462 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+    MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "TeX": {
+          Macros: {AA : "{\\unicode{x212B}}"},
+          extensions: ["autoload-all.js"]
+        },
+        "HTML-CSS": {
+          scale: 90
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+    MathJax.Hub.Register.StartupHook("TeX autoload-all Ready", function () {
+      var MACROS = MathJax.InputJax.TeX.Definitions.macros;
+      MACROS.color = "Color";
+      delete MACROS.colorbox;
+      delete MACROS.fcolorbox;
+    });
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
